@@ -1,0 +1,9 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4",
+    "karma": "^0.4.6",
+    "karma-jasmine": "^0.3.7"
+  }
+}
