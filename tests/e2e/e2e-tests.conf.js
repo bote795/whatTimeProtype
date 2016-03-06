@@ -5,9 +5,9 @@ exports.config = {
                 args: ['--disable-web-security']
             } 
         },
-        baseUrl: 'http://localhost:8100',
+        baseUrl: 'http://localhost:8101',
         specs: [
-            'e2e-tests/**/*.tests.js'
+            '/tests/*.tests.js'
         ],
         jasmineNodeOpts: {
             isVerbose: true,
