@@ -38,7 +38,7 @@ angular.module('myApp', ['ionic'])
     url: '/home',
     views: {
       'tab-profile': {
-        templateUrl: 'templates/tab-dash.html'
+        templateUrl: 'app/home/home.html'
       }
     }
   })
@@ -66,6 +66,6 @@ angular.module('myApp', ['ionic'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/tab/home');
 
 });

@@ -1,1 +1,9 @@
 /* Empty. Add your own CSS if you like */
+    .images-parent{
+      text-align: center;
+    }
+    .center-image{
+      margin:0 auto;
+      max-width: 80px !important;
+      max-height: 80px !important;
+    }
