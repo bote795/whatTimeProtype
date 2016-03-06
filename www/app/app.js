@@ -29,7 +29,7 @@ angular.module('myApp', ['ionic'])
   .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'app/home/tabs.html'
   })
 
   // Each tab has its own nav history stack:
@@ -37,19 +37,17 @@ angular.module('myApp', ['ionic'])
   .state('tab.home', {
     url: '/home',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-profile': {
+        templateUrl: 'templates/tab-dash.html'
       }
     }
   })
 
   .state('tab.nwEvent', {
-      url: '/chats',
+      url: '/events',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-events': {
+          templateUrl: 'templates/tab-chats.html'
         }
       }
     })
@@ -57,9 +55,8 @@ angular.module('myApp', ['ionic'])
   .state('tab.invitations', {
       url: '/invitations',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-invitations': {
+          templateUrl: 'templates/tab-chats.html'
         }
       }
     })
