@@ -1,0 +1,28 @@
+<ion-view title="Events" ng-controller="eventCtrl as vm">
+    <header class="bar bar-header bar-light">
+      <h1 class="title">Events</h1>
+    </header>
+    <ion-content padding="true" class="has-header padding">
+        <div class="list">
+            <div class="item item-icon-right item-text-wrap">
+                Friday Night
+                <div style="float:right;">
+                    {{1288323623006 | date:'MMMM dd'}}
+                </div> <i class="icon ion-chevron-right ion-accessory"></i>
+            </div>
+            <div class="item item-icon-right item-text-wrap">
+                Winteer Trip
+                <div style="float:right;">
+                    {{1288323623006 | date:'MMMM dd'}}
+                </div>
+                <i class="icon ion-chevron-right ion-accessory"></i>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="button-center button button-large button-positive" ng-click="vm.new()">
+                Create New Event
+            </button>
+        </div>
+    </ion-content>
+</ion-view>
+

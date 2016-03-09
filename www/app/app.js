@@ -43,11 +43,11 @@ angular.module('myApp', ['ionic'])
     }
   })
 
-  .state('tab.nwEvent', {
+  .state('tab.events', {
       url: '/events',
       views: {
         'tab-events': {
-          templateUrl: 'templates/tab-chats.html'
+          templateUrl: 'app/event/events.html'
         }
       }
     })
@@ -56,13 +56,17 @@ angular.module('myApp', ['ionic'])
       url: '/invitations',
       views: {
         'tab-invitations': {
-          templateUrl: 'templates/tab-chats.html'
+          templateUrl: 'app/invitation/invitations.html'
         }
       }
     })
   .state('login', {
     url: '/login',
     templateUrl: 'app/register/login.html'
+  })
+  .state('NewEvent',{
+    url: '/newEvent',
+    templateUrl: 'app/event/new.html'
   });
 
   // if none of the above states are matched, use this as the fallback
