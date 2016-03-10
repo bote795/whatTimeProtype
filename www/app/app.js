@@ -60,13 +60,13 @@ angular.module('myApp', ['ionic'])
         }
       }
     })
+  .state('newEvent',{
+    url: '/newEvent',
+      templateUrl: 'app/event/new.html'  
+  })
   .state('login', {
     url: '/login',
     templateUrl: 'app/register/login.html'
-  })
-  .state('NewEvent',{
-    url: '/newEvent',
-    templateUrl: 'app/event/new.html'
   });
 
   // if none of the above states are matched, use this as the fallback

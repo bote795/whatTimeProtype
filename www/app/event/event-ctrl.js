@@ -5,7 +5,7 @@
 			var vm =this;
 			vm.new = function(){
 				console.log("test");
-				$state.go("NewEvent");
+				$state.go("newEvent");
 			}
 	}
 })();
