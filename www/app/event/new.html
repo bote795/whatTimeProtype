@@ -1,10 +1,53 @@
-<ion-view title="New Event">
+<ion-view title="New Event" ng-controller="newEventCtrl as vm">
     <header class="bar bar-header bar-light">
       <h1 class="title">New Event</h1>
     </header>
 
     <ion-content padding="true" class="has-header padding">
-
+        <div class="list list-inset">
+          <label class="item item-input">
+            <i class="icon ion-calendar placeholder-icon"></i>
+            <input type="text" placeholder="Title">
+          </label>
+          <label class="item item-input">
+            <i class="icon ion-android-calendar placeholder-icon"></i>
+            <input type="date" placeholder="Date">
+          </label>
+        </div>
+        <div class="list item-input-inset">
+            <button class="button button-small" ng-click="vm.addSuggestion(vm.suggestion)">
+                 <i class="icon ion-ios-plus-empty placeholder-icon"></i>
+            </button>
+          <label class="item-input-wrapper">
+            <input type="text" ng-model="vm.suggestion"placeholder="Add Suggestions">
+          </label>
+        </div>
+        <div class="list item-input-inset">
+          <button class="button button-small" ng-click="vm.addFriend(vm.name)">
+                 <i class="icon ion-ios-plus-empty placeholder-icon"></i>
+            </button>
+          <label class="item-input-wrapper">
+            <input type="text" ng-model="vm.name" placeholder="Add Friends">
+          </label>            
+        </div>
+        <div class="list">
+            <div class="item item-divider">
+                Suggestions
+            </div>
+            <div class="item item-icon-left item-text-wrap" ng-repeat="suggestion in vm.suggestions">
+                 <i class="icon ion-ios-minus-outline placeholder-icon"></i>           
+                {{suggestion}}
+            </div>
+        </div>
+        <div class="list">
+            <div class="item item-divider">
+                Friends
+            </div>
+            <div class="item item-icon-left item-text-wrap" ng-repeat="name in vm.friends">
+                 <i class="icon ion-ios-minus-outline placeholder-icon"></i>           
+                 {{name}}
+            </div>
+        </div>
     </ion-content>
 </ion-view>
 
