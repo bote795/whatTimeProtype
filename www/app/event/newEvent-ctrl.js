@@ -15,5 +15,8 @@
 				vm.suggestions.push(suggestion);
 				vm.suggestion="";
 			}
+			vm.new =function() {
+				
+			}
 	}
 })();
