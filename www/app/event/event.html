@@ -1,0 +1,25 @@
+<ion-view view-title="{{vm.event.title}}" ng-controller="eventCtrl as vm">
+    <ion-content padding="true">
+        <div class="text-center">
+            <h4>{{vm.events[0].date  | date:"MMMM dd',' yyyy"}}</h4>
+            <div class="list">
+                <div class="item item-divider">
+                    You suggested </div>
+                <div class="item" ng-repeat="suggest in vm.event.suggestions">
+                    {{suggest.title}}
+                    <span style="float: right; font-size: 10px;">{{suggest.votes}} votes</span>
+                </div>
+            </div>
+            <div class="list">
+                <div class="item item-divider">
+                    You Invited </div>
+                <div class="item" ng-repeat="friend in vm.event.friends">
+                    {{friend}}
+                </div>
+            </div>
+            <div class="button-bar">
+                <a class="button button-positive">Edit</a>
+                <a class="button button-positive">Delete</a>
+            </div>
+    </ion-content>
+</ion-view>

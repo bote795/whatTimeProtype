@@ -60,9 +60,29 @@ angular.module('myApp', ['ionic'])
         }
       }
     })
-  .state('newEvent',{
+  .state('tab.invitationsStateOne', {
+      url: '/invitationsStateOne/:id',
+      views: {
+        'tab-invitations': {
+          templateUrl: 'app/invitation/invitedEventStageOne.html'
+        }
+      }
+    })
+  .state('tab.newEvent',{
     url: '/newEvent',
-      templateUrl: 'app/event/new.html'  
+    views: {
+      'tab-events':{
+        templateUrl: 'app/event/new.html'  
+      }
+    }
+  })
+  .state('tab.event',{
+    url: '/event/:id',
+    views: {
+      'tab-events':{
+        templateUrl: 'app/event/event.html'  
+      }
+    }
   })
   .state('login', {
     url: '/login',

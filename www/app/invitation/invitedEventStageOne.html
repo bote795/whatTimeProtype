@@ -1,0 +1,23 @@
+<ion-view view-title="{{vm.event.title}}" ng-controller="eventInviteStageOneCtrl as vm">
+    <ion-content padding="true">
+        <div class="text-center">
+            <h4>Your friend</h4>
+            <div style="font-size: 10px;"> Jose Manriquez</div>
+            <h4>Invited you to have a good time on</h4>
+            <div style="font-size: 10px;"> {{vm.event.date | date:'MMMM dd'}}</div>
+        </div>
+        <div class="list">
+            <div class="item item-divider">
+                Pick what you would like to do or add a suggestion
+            </div>
+            <ion-checkbox ng-change='vm.vote(suggest)' ng-model="suggest.value" ng-repeat="suggest in vm.event.suggestions">
+                {{suggest.title}}
+                <span style="float: right; font-size: 10px;">{{suggest.votes}} votes</span>
+            </ion-checkbox>
+        </div>
+        <div class="button-bar">
+            <a class="button button-positive">Send my Response!</a>
+            <a class="button button-positive">Decline Invitation</a>
+        </div>
+    </ion-content>
+</ion-view>s
