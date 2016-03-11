@@ -1,7 +1,8 @@
 (function() {
 
-	angular.module('myApp').controller('newEventCtrl',[ newEventCtrl ])
-	function newEventCtrl(){
+	angular.module('myApp').controller('newEventCtrl',
+		['eventsSrv', '$state',newEventCtrl ])
+	function newEventCtrl(eventsSrv,$state){
 			var vm =this;
 			vm.friends=[];
 			vm.suggestions=[];
@@ -12,11 +13,13 @@
 			}
 
 			vm.addSuggestion = function(suggestion) {
-				vm.suggestions.push(suggestion);
+				vm.suggestions.push({value: false, title: suggestion, votes: 0});
 				vm.suggestion="";
 			}
 			vm.new =function() {
-				
+				eventsSrv.addEvent({title: vm.title, date: vm.date,
+					createdby: "Adam", friends: vm.friends, suggestions: vm.suggestions})
+				$state.go('tab.events');
 			}
 	}
 })();

@@ -6,11 +6,11 @@
         <div class="list list-inset">
           <label class="item item-input">
             <i class="icon ion-calendar placeholder-icon"></i>
-            <input type="text" placeholder="Title">
+            <input type="text" placeholder="Title" ng-model="vm.title">
           </label>
           <label class="item item-input">
             <i class="icon ion-android-calendar placeholder-icon"></i>
-            <input type="date" placeholder="Date">
+            <input type="date" placeholder="Date" ng-model="vm.date">
           </label>
         </div>
         <div class="list item-input-inset">
@@ -35,7 +35,7 @@
             </div>
             <div class="item item-icon-left item-text-wrap" ng-repeat="suggestion in vm.suggestions">
                  <i class="icon ion-ios-minus-outline placeholder-icon"></i>           
-                {{suggestion}}
+                {{suggestion.title}}
             </div>
         </div>
         <div class="list">
@@ -44,7 +44,7 @@
             </div>
             <div class="item item-icon-left item-text-wrap" ng-repeat="name in vm.friends">
                  <i class="icon ion-ios-minus-outline placeholder-icon"></i>           
-                 {{name}}
+                 {{name }}
             </div>
         </div>
         <div class="text-center">
