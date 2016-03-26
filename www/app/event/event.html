@@ -1,7 +1,11 @@
 <ion-view view-title="{{vm.event.title}}" ng-controller="eventCtrl as vm">
     <ion-content padding="true">
         <div class="text-center">
-            <h4>{{vm.events[0].date  | date:"MMMM dd',' yyyy"}}</h4>
+            <h2>
+                {{vm.events[0].date  | date:"MMMM dd',' yyyy"}}
+                <a class="button button-icon icon ion-edit"></a>
+                <a class="button button-icon icon ion-trash-a"></a>
+            </h2>
             <div class="list">
                 <div class="item item-divider">
                     You suggested (select option)</div>
@@ -18,10 +22,7 @@
                 </div>
             </div>
             <div class="button-bar">
-                <a class="button button-positive">Edit</a>
                 <a class="button button-positive" ng-click="vm.selectedEvent()">Accept Event</a>
-<!--                 <a class="button button-positive" ng-click="vm.planTime()">Plan Time</a> -->
-                <a class="button button-positive">Delete</a>
             </div>
     </ion-content>
 </ion-view>
