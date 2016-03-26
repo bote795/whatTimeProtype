@@ -10,10 +10,10 @@
             <div class="list">
                 <div class="item item-divider">
                     You suggested time </div>
-                <div class="item" ng-repeat="time in vm.event.times">
-                    {{time.title}}
-                    <span style="float: right; font-size: 10px;">{{time.votes}} votes</span>
-                </div>
+                 <ion-checkbox  ng-model="time.value" ng-repeat="time in vm.event.times">
+                {{time.title}}
+                <span style="float: right; font-size: 10px;">{{time.votes}} votes</span>
+                </ion-checkbox>
             </div>
             <div class="list">
                 <div class="item item-divider">
