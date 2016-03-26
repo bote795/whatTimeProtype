@@ -4,11 +4,11 @@
             <h4>{{vm.events[0].date  | date:"MMMM dd',' yyyy"}}</h4>
             <div class="list">
                 <div class="item item-divider">
-                    You suggested </div>
-                <div class="item" ng-repeat="suggest in vm.event.suggestions">
-                    {{suggest.title}}
-                    <span style="float: right; font-size: 10px;">{{suggest.votes}} votes</span>
-                </div>
+                    You suggested (select option)</div>
+                <ion-checkbox  ng-model="suggest.value" ng-repeat="suggest in vm.event.suggestions">
+                {{suggest.title}}
+                <span style="float: right; font-size: 10px;">{{suggest.votes}} votes</span>
+                </ion-checkbox>
             </div>
             <div class="list">
                 <div class="item item-divider">
@@ -19,8 +19,8 @@
             </div>
             <div class="button-bar">
                 <a class="button button-positive">Edit</a>
-                <a class="button button-positive">Accept Event</a>
-                <a class="button button-positive">Plan Time</a>
+                <a class="button button-positive" ng-click="vm.selectedEvent()">Accept Event</a>
+<!--                 <a class="button button-positive" ng-click="vm.planTime()">Plan Time</a> -->
                 <a class="button button-positive">Delete</a>
             </div>
     </ion-content>

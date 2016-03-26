@@ -16,7 +16,6 @@
 			}
 			this.new = function(){
 				vm.event.stage = 2;
-				eventsSrv.addEvent(vm.event);
 				$state.go('tab.events');
 			}
 	}
