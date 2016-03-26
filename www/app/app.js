@@ -76,6 +76,22 @@ angular.module('myApp', ['ionic'])
       }
     }
   })
+  .state('tab.stage2',{
+    url: '/stage2/:id',
+    views: {
+      'tab-events':{
+        templateUrl: 'app/event/stage2.html'  
+      }
+    }
+  })
+  .state('tab.eventS2',{
+    url: '/eventS2/:id',
+    views: {
+      'tab-events':{
+        templateUrl: 'app/event/eventS2.html'  
+      }
+    }
+  })
   .state('tab.event',{
     url: '/event/:id',
     views: {

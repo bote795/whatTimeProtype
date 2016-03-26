@@ -9,7 +9,13 @@
 				$state.go("tab.newEvent");
 			}
 			vm.selectEvent= function(id){
-				$state.go('tab.event',{id: id})
+				if (vm.events[id].stage ==1) {
+					$state.go('tab.event',{id: id});
+				}
+				else
+				{
+					$state.go('tab.eventS2',{id: id})
+				}
 			}
 	}
 })();

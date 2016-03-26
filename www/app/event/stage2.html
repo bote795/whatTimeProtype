@@ -1,0 +1,33 @@
+<ion-view title="Plan Event Time" ng-controller="eventStage2Ctrl as vm">
+    <header class="bar bar-header bar-positive">
+      <h1 class="title">Plan Event Time</h1>
+    </header>
+    <ion-content padding="true" class="has-header padding">
+      <h2>{{vm.event.title}}</h2>
+        <form ng-submit="vm.addTime(vm.time)">
+          <div class="list item-input-inset">
+              <button class="button button-small" type="submit">
+                   <i class="icon ion-ios-plus-empty placeholder-icon"></i>
+              </button>
+            <label class="item-input-wrapper">
+              <input type="text" ng-model="vm.time"placeholder="Add Time for Event">
+            </label>
+          </div>
+        </form>
+        <div class="list">
+            <div class="item item-divider">
+              Event Times
+            </div>
+            <div class="item item-icon-left item-text-wrap" ng-repeat="time in vm.event.times">
+                 <i class="icon ion-ios-minus-outline placeholder-icon"></i>           
+                {{time.title}}
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="button-center button button-large button-positive" ng-click="vm.new()">
+               Send Times!
+            </button>
+        </div>
+    </ion-content>
+</ion-view>
+

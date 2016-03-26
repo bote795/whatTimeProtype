@@ -13,14 +13,16 @@
             <input type="date" placeholder="Date" ng-model="vm.date">
           </label>
         </div>
-        <div class="list item-input-inset">
-            <button class="button button-small" ng-click="vm.addSuggestion(vm.suggestion)">
-                 <i class="icon ion-ios-plus-empty placeholder-icon"></i>
-            </button>
-          <label class="item-input-wrapper">
-            <input type="text" ng-model="vm.suggestion"placeholder="Add Suggestions">
-          </label>
-        </div>
+        <form ng-submit="vm.addSuggestion(vm.suggestion)">
+          <div class="list item-input-inset">
+              <button class="button button-small" type="submit">
+                   <i class="icon ion-ios-plus-empty placeholder-icon"></i>
+              </button>
+            <label class="item-input-wrapper">
+              <input type="text" ng-model="vm.suggestion"placeholder="Add Suggestions">
+            </label>
+          </div>
+        </form>
         <div class="list item-input-inset">
           <button class="button button-small" ng-click="vm.addFriend(vm.name)">
                  <i class="icon ion-ios-plus-empty placeholder-icon"></i>

@@ -9,7 +9,13 @@
 		suggestions: [
 	      	{value: false , title: "Movies", votes: 3},
 	      	{value: false, title: "Netflix and Chill", votes: 1}
-    	] 
+    	],
+    	times: [],
+    	decided: {
+    		suggestion: {},
+    		time: {}
+    	}, 
+    	stage: 1
         , createdby: "James Oscars"}];
     this.addEvent= function (event){
         self.events.push(event);
