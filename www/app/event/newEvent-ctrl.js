@@ -18,7 +18,15 @@
 			}
 			vm.new =function() {
 				eventsSrv.addEvent({title: vm.title, date: vm.date,
-					createdby: "Adam", friends: vm.friends, suggestions: vm.suggestions})
+					createdby: "Adam", friends: vm.friends,
+					 suggestions: vm.suggestions ,
+					 stage: 1,
+					 times: [],
+				    	decided: {
+				    		suggestion: {},
+				    		time: {}
+				    	}
+					})
 				$state.go('tab.events');
 			}
 	}

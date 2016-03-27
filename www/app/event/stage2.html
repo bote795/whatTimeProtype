@@ -5,6 +5,15 @@
     <ion-content padding="true" class="has-header padding">
       <h2>{{vm.event.title}}</h2>
       <h4>{{vm.event.decided.suggestion}}</h4>
+        <div class="list">
+            <div class="item item-divider">
+              Event Times
+            </div>
+            <div class="item item-icon-left item-text-wrap" ng-repeat="time in vm.event.times">
+                 <i class="icon ion-ios-minus-outline placeholder-icon"></i>           
+                {{time.title}}
+            </div>
+        </div>
         <form ng-submit="vm.addTime(vm.time)">
           <div class="list item-input-inset">
               <button class="button button-small" type="submit">
@@ -15,15 +24,6 @@
             </label>
           </div>
         </form>
-        <div class="list">
-            <div class="item item-divider">
-              Event Times
-            </div>
-            <div class="item item-icon-left item-text-wrap" ng-repeat="time in vm.event.times">
-                 <i class="icon ion-ios-minus-outline placeholder-icon"></i>           
-                {{time.title}}
-            </div>
-        </div>
         <div class="text-center">
             <button class="button-center button button-large button-positive" ng-click="vm.new()">
                Send Times!

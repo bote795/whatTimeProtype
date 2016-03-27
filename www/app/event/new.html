@@ -13,6 +13,15 @@
             <input type="date" placeholder="Date" ng-model="vm.date">
           </label>
         </div>
+        <div class="list">
+            <div class="item item-divider">
+                Suggestions
+            </div>
+            <div class="item item-icon-left item-text-wrap" ng-repeat="suggestion in vm.suggestions">
+                 <i class="icon ion-ios-minus-outline placeholder-icon"></i>           
+                {{suggestion.title}}
+            </div>
+        </div>
         <form ng-submit="vm.addSuggestion(vm.suggestion)">
           <div class="list item-input-inset">
               <button class="button button-small" type="submit">
@@ -23,23 +32,6 @@
             </label>
           </div>
         </form>
-        <div class="list item-input-inset">
-          <button class="button button-small" ng-click="vm.addFriend(vm.name)">
-                 <i class="icon ion-ios-plus-empty placeholder-icon"></i>
-            </button>
-          <label class="item-input-wrapper">
-            <input type="text" ng-model="vm.name" placeholder="Add Friends">
-          </label>            
-        </div>
-        <div class="list">
-            <div class="item item-divider">
-                Suggestions
-            </div>
-            <div class="item item-icon-left item-text-wrap" ng-repeat="suggestion in vm.suggestions">
-                 <i class="icon ion-ios-minus-outline placeholder-icon"></i>           
-                {{suggestion.title}}
-            </div>
-        </div>
         <div class="list">
             <div class="item item-divider">
                 Friends
@@ -48,6 +40,14 @@
                  <i class="icon ion-ios-minus-outline placeholder-icon"></i>           
                  {{name }}
             </div>
+        </div>
+        <div class="list item-input-inset">
+          <button class="button button-small" ng-click="vm.addFriend(vm.name)">
+                 <i class="icon ion-ios-plus-empty placeholder-icon"></i>
+            </button>
+          <label class="item-input-wrapper">
+            <input type="text" ng-model="vm.name" placeholder="Add Friends">
+          </label>            
         </div>
         <div class="text-center">
             <button class="button-center button button-large button-positive" ng-click="vm.new()">
