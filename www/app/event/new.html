@@ -41,14 +41,16 @@
                  {{name }}
             </div>
         </div>
-        <div class="list item-input-inset">
-          <button class="button button-small" ng-click="vm.addFriend(vm.name)">
-                 <i class="icon ion-ios-plus-empty placeholder-icon"></i>
-            </button>
-          <label class="item-input-wrapper">
-            <input type="text" ng-model="vm.name" placeholder="Add Friends">
-          </label>            
-        </div>
+        <form ng-submit="vm.addFriend(vm.name)">
+          <div class="list item-input-inset">
+            <button class="button button-small" type="submit">
+                   <i class="icon ion-ios-plus-empty placeholder-icon"></i>
+              </button>
+            <label class="item-input-wrapper">
+              <input type="text" ng-model="vm.name" placeholder="Add Friends">
+            </label>            
+          </div>
+        </form>
         <div class="text-center">
             <button class="button-center button button-large button-positive" ng-click="vm.new()">
                 Create New Event
